@@ -26,13 +26,14 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.InputType;
 
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import nl.hnogames.domoticz.MainActivity;
 import nl.hnogames.domoticz.R;
 import nl.hnogames.domoticz.adapters.UserVariablesAdapter;

@@ -21,6 +21,9 @@
 
 package nl.hnogames.domoticz.widgets;
 
+import static android.appwidget.AppWidgetManager.EXTRA_APPWIDGET_ID;
+import static android.appwidget.AppWidgetManager.INVALID_APPWIDGET_ID;
+
 import android.appwidget.AppWidgetManager;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,17 +33,18 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.MenuItemCompat;
+
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.ftinc.scoop.Scoop;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.view.MenuItemCompat;
 import nl.hnogames.domoticz.R;
 import nl.hnogames.domoticz.SettingsActivity;
 import nl.hnogames.domoticz.adapters.WidgetsAdapter;
@@ -53,9 +57,6 @@ import nl.hnogames.domoticz.welcome.WelcomeViewActivity;
 import nl.hnogames.domoticzapi.Containers.DevicesInfo;
 import nl.hnogames.domoticzapi.DomoticzValues;
 import nl.hnogames.domoticzapi.Interfaces.DevicesReceiver;
-
-import static android.appwidget.AppWidgetManager.EXTRA_APPWIDGET_ID;
-import static android.appwidget.AppWidgetManager.INVALID_APPWIDGET_ID;
 
 public class WidgetConfigurationActivity extends AppCompatActivity {
 
@@ -370,12 +371,10 @@ public class WidgetConfigurationActivity extends AppCompatActivity {
                         break;
 
                     case DomoticzValues.Device.Type.Value.BLINDPERCENTAGE:
-                    case DomoticzValues.Device.Type.Value.BLINDPERCENTAGEINVERTED:
                         withButton = BUTTON_ONOFF;
                         break;
 
                     case DomoticzValues.Device.Type.Value.BLINDS:
-                    case DomoticzValues.Device.Type.Value.BLINDINVERTED:
                         if (DomoticzValues.canHandleStopButton(s))
                             withButton = BUTTON_BLINDS;
                         else

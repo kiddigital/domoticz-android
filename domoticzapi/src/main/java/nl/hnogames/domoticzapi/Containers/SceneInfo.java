@@ -160,9 +160,10 @@ public class SceneInfo implements Comparable, Serializable {
         return status;
     }
 
-    public Boolean isTimers() {
+    public boolean hasTimers() {
         return timers;
     }
+
 
     public String getType() {
         return type;
@@ -175,9 +176,11 @@ public class SceneInfo implements Comparable, Serializable {
     public void setIdx(int n) {
         idx = n;
     }
+
     public void setName(String n) {
         name = n;
     }
+
     public void setType(String n) {
         type = n;
     }

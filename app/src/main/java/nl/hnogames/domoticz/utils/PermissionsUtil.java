@@ -27,12 +27,13 @@ import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Build;
 
-import com.fastaccess.permission.base.PermissionFragmentHelper;
-import com.fastaccess.permission.base.PermissionHelper;
-
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.ContextCompat;
+
+import com.fastaccess.permission.base.PermissionFragmentHelper;
+import com.fastaccess.permission.base.PermissionHelper;
+
 import nl.hnogames.domoticz.R;
 
 @RequiresApi(api = Build.VERSION_CODES.S)
@@ -54,9 +55,10 @@ public class PermissionsUtil {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
-    //these permissions are needed for getting device id
+    //these permissions are needed for getting device id / notifications
     public static final String[] INITIAL_DEVICE_PERMS = {
-            Manifest.permission.READ_PHONE_STATE
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.POST_NOTIFICATIONS
     };
     //these permissions are needed for scanning qrcodes
     public static final String[] INITIAL_CAMERA_PERMS = {

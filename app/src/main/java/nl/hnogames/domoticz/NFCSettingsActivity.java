@@ -30,6 +30,9 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.ftinc.scoop.Scoop;
 import com.google.android.material.snackbar.Snackbar;
@@ -37,8 +40,6 @@ import com.nhaarman.listviewanimations.appearance.simple.SwingBottomInAnimationA
 
 import java.util.ArrayList;
 
-import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import nl.hnogames.domoticz.adapters.NFCAdapter;
 import nl.hnogames.domoticz.app.AppCompatAssistActivity;
 import nl.hnogames.domoticz.containers.NFCInfo;
